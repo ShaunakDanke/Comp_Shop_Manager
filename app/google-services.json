@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "353399053855",
+    "project_id": "computershopapp-f881b",
+    "storage_bucket": "computershopapp-f881b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353399053855:android:3032a912f28aef17013f2a",
+        "android_client_info": {
+          "package_name": "com.example.comp_shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmeUMndLXdWPEbO-5TwDa7mVmWPuYVl6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353399053855:android:7d7ed08d3d539a2b013f2a",
+        "android_client_info": {
+          "package_name": "com.example.computershopapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmeUMndLXdWPEbO-5TwDa7mVmWPuYVl6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

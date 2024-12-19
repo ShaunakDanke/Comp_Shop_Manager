@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16sp"
+    android:background="@color/lighter_seafoamgreen">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heading"
+        android:text="Customer Registration"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/dark_slate_blue"
+        />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/lbname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="20sp"
+        android:layout_below="@id/heading"/>
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbname"
+        android:hint="Enter Name" />
+
+    <!-- Address -->
+    <TextView
+        android:id="@+id/lbaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:text="Address:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbaddress"
+        android:hint="Enter Address" />
+
+    <!-- City Spinner -->
+    <TextView
+        android:id="@+id/lbCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAddress"
+        android:text="City:"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinnerCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbCity" />
+
+    <!-- Pincode Spinner -->
+    <TextView
+        android:id="@+id/lbpincode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerCity"
+        android:text="Pincode:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPincode"
+        android:layout_below="@id/lbpincode"
+        android:hint="Pincode" />
+
+    <!-- Contact -->
+    <TextView
+        android:id="@+id/lbcontact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtPincode"
+        android:text="Contact:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbcontact"
+        android:hint="Enter Contact" />
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/lbEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtContact"
+        android:text="Email:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbEmail"
+        android:hint="Enter Email" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/lblDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEmail"
+        android:text="Date" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDate"
+        android:text="Save" />
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btnSave"
+        android:layout_below="@id/lblDate"
+        android:text="Update"
+        android:layout_marginLeft="10sp"/>
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDate"
+        android:layout_toRightOf="@id/btnUpdate"
+        android:text="Delete"
+        android:layout_marginLeft="10sp"/>
+
+    <!-- New Button -->
+    <Button
+        android:id="@+id/btnNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDate"
+        android:layout_toRightOf="@id/btnDelete"
+        android:text="New"
+        android:layout_marginLeft="10sp"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="5sp"
+        android:layout_below="@id/btnDelete"
+        android:layout_marginTop="10sp"
+        android:background="@color/lavender"/>
+
+    <!-- RecyclerView for customer list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="16sp"
+        />
+
+</RelativeLayout>

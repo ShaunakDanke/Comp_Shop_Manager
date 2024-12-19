@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <!-- Toolbar at the top -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0sp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- User details section -->
+        <LinearLayout
+            android:id="@+id/userDetailsLayout"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16sp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="20sp">
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="64sp"
+                android:layout_height="64sp"
+                android:src="@drawable/splashlogo"
+                android:layout_marginEnd="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:textColor="@color/lavender"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="user@example.com"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Admin Dashboard Heading -->
+        <TextView
+            android:id="@+id/AdminHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Dashboard"
+            android:textSize="25sp"
+            android:textColor="@color/lavender"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/userDetailsLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- First Row of Buttons -->
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="200sp"
+            android:id="@+id/row1"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/AdminHeading">
+
+            <RelativeLayout
+                android:id="@+id/custregis"
+                android:layout_width="0sp"
+                android:layout_height="170sp"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:background="#E0F7FA"
+                android:padding="10sp"
+                android:elevation="20sp">
+
+                <ImageView
+                    android:id="@+id/crimage"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/baseline_person_pin_24" />
+
+                <Button
+                    android:id="@+id/btnCustomerRegistration"
+                    android:layout_width="150sp"
+                    android:layout_height="100sp"
+                    android:text="Customer Registration"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/crimage"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/prodregis"
+                android:layout_width="0sp"
+                android:layout_height="170sp"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:background="#FFEBEE"
+                android:padding="10sp"
+                android:elevation="20sp">
+
+                <ImageView
+                    android:id="@+id/primage"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/baseline_computer_24" />
+
+                <Button
+                    android:id="@+id/btnProductRegistration"
+                    android:layout_width="150sp"
+                    android:layout_height="100sp"
+                    android:text="Product Registration"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/primage"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Second Row of Buttons -->
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="200sp"
+            android:id="@+id/row2"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/row1">
+
+            <RelativeLayout
+                android:id="@+id/bil"
+                android:layout_width="0sp"
+                android:layout_height="170sp"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:background="#E0F7FA"
+                android:padding="10sp"
+                android:elevation="20sp">
+
+                <ImageView
+                    android:id="@+id/bilimage"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/baseline_add_shopping_cart_24" />
+
+                <Button
+                    android:id="@+id/btnBilling"
+                    android:layout_width="150sp"
+                    android:layout_height="100sp"
+                    android:text="Billing"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/bilimage"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/custreport"
+                android:layout_width="0sp"
+                android:layout_height="170sp"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:background="#FFEBEE"
+                android:padding="10sp"
+                android:elevation="20sp">
+
+                <ImageView
+                    android:id="@+id/creportimage"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/baseline_person_pin_24" />
+
+                <Button
+                    android:id="@+id/btnCustomerReports"
+                    android:layout_width="150sp"
+                    android:layout_height="100sp"
+                    android:text="Customer Report"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/creportimage"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- Third Row of Buttons -->
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="200sp"
+            android:id="@+id/row3"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/row2">
+
+            <RelativeLayout
+                android:id="@+id/prodreport"
+                android:layout_width="0sp"
+                android:layout_height="170sp"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:background="#E0F7FA"
+                android:padding="10sp"
+                android:elevation="20sp">
+
+                <ImageView
+                    android:id="@+id/primage"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/baseline_computer_24"
+                    tools:ignore="DuplicateIds" />
+
+                <Button
+                    android:id="@+id/btnProductReports"
+                    android:layout_width="150sp"
+                    android:layout_height="100sp"
+                    android:text="Product Report"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/primage"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/salesreport"
+                android:layout_width="0sp"
+                android:layout_height="170sp"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:background="#FFEBEE"
+                android:padding="10sp"
+                android:elevation="20sp">
+
+                <ImageView
+                    android:id="@+id/srimage"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/baseline_attach_money_24"
+                    tools:ignore="DuplicateIds" />
+
+                <Button
+                    android:id="@+id/btnSalesReport"
+                    android:layout_width="150sp"
+                    android:layout_height="100sp"
+                    android:text="Sales Report"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/srimage"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="200sp"
+            android:id="@+id/row4"
+            android:orientation="horizontal"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/row3">
+
+
+            <RelativeLayout
+                android:id="@+id/alerts"
+                android:layout_width="0sp"
+                android:layout_height="170sp"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:background="#FFEBEE"
+                android:padding="10sp"
+                android:elevation="20sp">
+
+                <ImageView
+                    android:id="@+id/srimage"
+                    android:layout_width="75sp"
+                    android:layout_height="75sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15sp"
+                    android:src="@drawable/baseline_add_alert_24"
+                    tools:ignore="DuplicateIds" />
+
+                <Button
+                    android:id="@+id/btnAlerts"
+                    android:layout_width="150sp"
+                    android:layout_height="100sp"
+                    android:text="Alerts"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/srimage"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

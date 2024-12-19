@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReceiptActivity"
+    android:background="@color/lighter_seafoamgreen">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Heading"
+                android:text="Sales Report"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textSize="50sp"
+                android:textColor="@color/dark_slate_blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblInvoiceNo"
+                android:layout_below="@id/Heading"
+                android:layout_marginTop="20sp"
+                android:text="Invoice_No:"
+                android:textSize="25sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtinvoiceno"
+                android:layout_below="@id/Heading"
+                android:layout_toRightOf="@id/lblCname"
+                android:layout_marginTop="20sp"/>
+
+            <TextView
+                android:id="@+id/lblCid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblInvoiceNo"
+                android:layout_marginTop="33dp"
+                android:text="Customer ID:"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtCid"
+                android:layout_below="@id/txtinvoiceno"
+                android:layout_toRightOf="@id/lblCname"
+                android:layout_marginTop="20sp"/>
+
+            <TextView
+                android:id="@+id/lblContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblCid"
+                android:layout_marginTop="38dp"
+                android:text="Contact No:"
+                android:textSize="25sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtContactNo"
+                android:layout_below="@id/txtCid"
+                android:layout_toRightOf="@id/lblCname"
+                android:layout_marginTop="20sp"/>
+
+            <TextView
+                android:id="@+id/lblCname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblContact"
+                android:layout_marginTop="38dp"
+                android:text="Customer Name:"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/txtCname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtContactNo"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="28dp"
+                android:layout_toRightOf="@id/lblCname" />
+
+            <TextView
+                android:id="@+id/lblGst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblCname"
+                android:layout_marginTop="38dp"
+                android:text="GST Amount:"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/txtGst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCname"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="28dp"
+                android:layout_toRightOf="@id/lblCname" />
+
+            <TextView
+                android:id="@+id/lblfinalamt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblGst"
+                android:layout_marginTop="38dp"
+                android:text="Final Amount:"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/txtFinalamt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtGst"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="28dp"
+                android:layout_toRightOf="@id/lblCname" />
+
+            <TextView
+                android:id="@+id/lblPdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lblfinalamt"
+                android:layout_marginTop="38dp"
+                android:text="Date:"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/txtPdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtFinalamt"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="28dp"
+                android:layout_toRightOf="@id/lblCname" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutColumns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/txtPdate"
+                android:layout_marginTop="20dp"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/lblpid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Product Name"
+                    android:textSize="15sp"
+                    android:padding="4dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Product ID"
+                    android:textSize="15sp"
+                    android:padding="4dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Category"
+                    android:textSize="15sp"
+                    android:padding="4dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quantity"
+                    android:textSize="15sp"
+                    android:padding="4dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Price"
+                    android:textSize="15sp"
+                    android:padding="4dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total"
+                    android:textSize="15sp"
+                    android:padding="4dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerReceiptProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayoutColumns"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:id="@+id/btnConvertToPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convert to PDF"
+                android:layout_below="@id/recyclerReceiptProducts"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
