@@ -23,7 +23,7 @@
 - Generate detailed reports for:
   - Customers
   - Products (with category and inventory tracking)
-  - Sales (with date-range filtering support)
+  - Sales (with date-range filtering suppor)
 
 ### **5. Real-Time Data Sync**
 - Firestore integration ensures instant data synchronization across devices.
@@ -33,4 +33,4 @@
 ## **Technologies Used**
 - **Programming Language**: Java  
 - **Database**: Firebase Firestore  
-- **UI Design**: XML Layouts with Material Design principles  
+- **UI Design**: XML Layouts with built-in vector assets in Android Studio
